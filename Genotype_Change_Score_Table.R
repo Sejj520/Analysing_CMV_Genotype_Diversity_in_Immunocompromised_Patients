@@ -1,6 +1,6 @@
 # To show Differences in genotype diversity between blood, blood and urine, 
 
-## To identify genotype variation in the blood
+# To identify genotype variation in the blood
 
 # Step 1- load the table for blood samples only:
 
