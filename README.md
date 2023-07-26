@@ -4,4 +4,4 @@
 ### - tidyverse
 ### - ggplot2
 ### - dplyr
-### When opening csv. files in R, first make sure that the file directory is set to where the csv file you want to use is located. To see the current working directory to check it is the righ one, use the 'getwd()' function. To change the working direcory, use the 'setwd()' function. 
+### When opening csv. files in R, first make sure that the file directory is set to where the csv file you want to use is located. To see the current working directory to check it is the right one, use the 'getwd()' function. To change the working direcory, use the 'setwd()' function. 
