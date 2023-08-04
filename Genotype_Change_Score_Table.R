@@ -1,8 +1,7 @@
 # To show Differences in genotype diversity between blood, blood and urine, 
-
 # To identify genotype variation in the blood
 
-# Step 1- load the table for blood samples only:
+# Step 1 - load the table for blood samples only:
 
 library(tidyverse)
 library(dplyr)
@@ -10,7 +9,7 @@ library(dplyr)
 df_sampleTypeBlood <- read.csv("GenotypeTotals_Blood.csv")
 df_sampleTypeBlood
 
-# Step 2- Group by Patient.ID and Region
+# Step 2 - Group by Patient.ID and Region
 df_changesBlood <- df_sampleTypeBlood %>%
   arrange(Patient.ID, Region, `Collection.Date..yy.mm.dd.`) %>%
   group_by(Patient.ID, Region) %>%
@@ -18,7 +17,7 @@ df_changesBlood <- df_sampleTypeBlood %>%
   ungroup()
 df_changesBlood
 
-# Step 3- Summarize the data to get the total sum of 0s and 1s for each Region
+# Step 3 - Summarize the data to get the total sum of 0s and 1s for each Region
 
 df_summaryBlood <- df_changesBlood %>%
   group_by(Patient.ID, Region) %>%
@@ -27,7 +26,7 @@ df_summaryBlood <- df_changesBlood %>%
 print(df_summaryBlood)
 write_csv(df_summaryBlood, "df_SummaryBlood.csv")
 
-# Step 4 -Print the summary of total 1s only, as we only need this to calculate genotype change
+# Step 4 - Print the summary of total 1s only, as we only need this to calculate genotype change
 
 df_summaryofChangesBlood <- df_changesBlood %>%
   group_by(Patient.ID, Region) %>%
