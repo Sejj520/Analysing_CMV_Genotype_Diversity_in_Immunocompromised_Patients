@@ -1,9 +1,7 @@
-# Creating Boxplots to show the numebr of genotype changes in each sample type.
+# Creating Boxplots to show the number of genotype changes in each sample type.
 
 library(ggplot2)
 library(dplyr)
-
-# Assuming you have df_summary_patientBU, df_summary_patientBS, and df_summary_patientBlood data frames
 
 # Combine the three data frames using bind_rows
 df_combined <- bind_rows(
